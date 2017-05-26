@@ -13,12 +13,15 @@ BasicGame.Preloader.prototype = {
             fill: '#fff',
             algin: 'center'
         });
-        this.preloaderText.anchor.setTo(0.5,0.5);
+        this.preloaderText.anchor.setTo(0.5, 0.5);
         //preload the images, sprites and audio assets into the memory
         this.load.image('logo', 'assets/PhaserLogo.png');
         this.load.image('starfield', 'assets/starfield.png');
         this.load.image('startButton', 'assets/startButton.png');
         this.load.image('ship', 'assets/ship.png');
+        this.load.image('ufo', 'assets/ufo.png');
+        this.load.image('life', 'assets/life.png');
+        this.load.image('bullet', 'assets/bullet.png');
         
 	},
 
@@ -28,7 +31,7 @@ BasicGame.Preloader.prototype = {
 
 	update: function () {
         //
-        this.game.state.start('MainMenu.js');
+        this.game.state.start('MainMenu');
 	}
 
 };
