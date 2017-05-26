@@ -19,14 +19,18 @@ BasicGame.Preloader.prototype = {
         this.load.image('starfield', 'assets/starfield.png');
         this.load.image('startButton', 'assets/startButton.png');
         this.load.image('ship', 'assets/ship.png');
+<<<<<<< HEAD
         this.load.image('ufo', 'assets/ufo.png');
         this.load.image('life', 'assets/life.png');
         this.load.image('bullet', 'assets/bullet.png');
         
+=======
+
+>>>>>>> origin/master
 	},
 
 	create: function () {
-	
+
 	},
 
 	update: function () {
