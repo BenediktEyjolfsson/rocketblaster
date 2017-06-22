@@ -156,15 +156,15 @@ BasicGame.Game.prototype = {
     },
     
     fireBullet: funtion () {
-    if(this.time.now > nextFire && bullets.countDead() > 0) {
+    if (this.time.now > nextFire && bullets.countDead() > 0) {
         nextFire = this.time.now + fireRate;
         var bullet = bullets.getFirstExists(false);
         bullet.reset(ship.x, ship.y);
         bullet.body.velocity.y = -400;
-        bulletAudio.play)();
+        bulletAudio.play();    
         }
     },
-        collisionDetection: function () {
+    collisionDetection: function () {
             this.physics.arcade.overlap(ship, ufos, this.collideUfo, null, this);
             this.physics.arcade.overlap(ship, lives, this.collideLife, null, this);
             this.physics.arcade.overlap(bullets, ufos, this.destroyUfo, null, this);
