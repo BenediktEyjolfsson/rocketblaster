@@ -32,7 +32,7 @@ BasicGame.Game.prototype = {
         this.starfield = this.add.tileSprite(0, 0, 800, 600, 'starfield');
         //Add the ship on to the screen, set physics and the boundaries
         ship = this.add.sprite((this.world.width / 2), this.world.height - 50, 'ship');
-        ship.anchor.setTo(0.5,0);
+        ship.anchor.setTo(0.5, 0);
         this.physics.enable(ship, Phaser.Physics.ARCADE);
         ship.body.collideWorldBounds = true;
         
@@ -52,8 +52,8 @@ BasicGame.Game.prototype = {
         lives.setAll('anchor.x', 0.5);
         lives.setAll('anchor.y', 0.5);
         
-        bullets =this.add.group();
-        bullets.enableBody =true;
+        bullets = this.add.group();
+        bullets.enableBody = true;
         bullets.physicsBodyType = Phaser.Physics.ARCADE;
         bullets.createMultiple(30, 'bullet', 0, false);
         bullets.setAll('anchor.x', 0.5);
@@ -64,7 +64,7 @@ BasicGame.Game.prototype = {
         scoreText = this.add.text(16, 16, 'score: 0', {
             font: '32px arial',
             fill: '#fff'
-        }),
+        });
         score = 0;
         scoreText.text = "Score: " + score;
         
@@ -83,10 +83,10 @@ BasicGame.Game.prototype = {
         seconds = 0;
         timerText.text = 'Time: ' + seconds;
         
-        gameOverText = this.add.text(this.world.centerX, this.world.centerY-50, 'Game Over', {
+        gameOverText = this.add.text(this.world.centerX, this.world.centerY - 50, 'Game Over', {
                                      font: '96px arial',
                                      fill: '#fff',
-                                     alian: 'center'
+                                     align: 'center'
                                      });
         gameOverText.anchor.set(0.5);
         gameOverText.visible = false;
