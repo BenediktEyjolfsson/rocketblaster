@@ -14,9 +14,14 @@ var lifeTotal;
 var scoreText;
 var lifeTotalText;
 
+var music;
+var bulletAudio;
+var explosionAudio;
+
 var seconds;
 var timer;
 var timerText;
+
 
 var cursors;
 var gameOverText;
@@ -192,7 +197,7 @@ BasicGame.Game.prototype = {
     collectLife: function (ship, life) {
         life.kill();
         lifeTotal++;
-        lifeTotalText.text = 'Lives: ' + lifeToal;
+        lifeTotalText.text = 'Lives: ' + lifeTotal;
         var animation = this.add.sprite(life.body.x, life.body.y, 'lifeAnimation');
         animation.animations.add('lifeAnimation');
         animation.animations.play('lifeAnimation', 30, false, true);
