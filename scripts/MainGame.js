@@ -109,6 +109,7 @@ BasicGame.Game.prototype = {
 	},
 
 	update: function () {
+        console.log(lifeTotal);
         this.starfield.tilePosition.y += 2;
         
         if (lifeTotal < 1 || seconds == 60 || gameOver === true) {
@@ -216,8 +217,8 @@ BasicGame.Game.prototype = {
     restartGame: function () {
         this.game.state.start('Game')
     },
-    render: function() {
-        this.game.debug.bodyInfo(ship, 32, 100);
-        this.game.debug.spriteBounds(ship);
-    }
+    //render: function() {
+        //this.game.debug.bodyInfo(ship, 32, 100);
+        //this.game.debug.spriteBounds(ship);
+    //}
 };
