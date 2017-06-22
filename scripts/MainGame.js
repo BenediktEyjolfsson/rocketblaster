@@ -109,7 +109,6 @@ BasicGame.Game.prototype = {
 	},
 
 	update: function () {
-        console.log(lifeTotal);
         this.starfield.tilePosition.y += 2;
         
         if (lifeTotal < 1 || seconds == 60 || gameOver === true) {
@@ -179,7 +178,6 @@ BasicGame.Game.prototype = {
         animation.animations.play('explode', 30, false, true);
         lifeTotal--;
         lifeTotalText.text = 'Lives: ' + lifeTotal;
-        gameOver=true;
     },
     destroyUfo: function (bullet, ufo) {
         explosionAudio.play();
