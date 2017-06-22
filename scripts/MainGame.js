@@ -95,6 +95,7 @@ BasicGame.Game.prototype = {
         restartButton = this.add.button((this.world.width / 2), (this.world.height / 2) + 50, 'startButton', this.restartGame);
         restartButton.anchor.set(0.5);
         restartButton.visible = false;
+        
         this.input.keyboard.addKeyCapture([Phaser.keyboard.LEFT, Phaser.Keyboard.RIGHT, Phaser.keyboard.SPACEBAR]);
         cursors = this.input.keyboard.createCursorKeys();
         
