@@ -132,7 +132,7 @@ BasicGame.Game.prototype = {
         else {
                 ship.body.velocity.x = 0;
         }
-        if (this.input.keyboard.isDown(Phaser.keyboard.SPACEBAR)) {
+        if (this.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
             this.fireBullet();
         }
     },
