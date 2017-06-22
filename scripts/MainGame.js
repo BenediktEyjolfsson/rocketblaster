@@ -83,7 +83,7 @@ BasicGame.Game.prototype = {
         seconds = 0;
         timerText.text = 'Time: ' + seconds;
         
-        gameOverText = this.add.text(this.world.centerX, this.world.center Y-50, 'Game Over', {
+        gameOverText = this.add.text(this.world.centerX, this.world.centerY-50, 'Game Over', {
                                      font: '96px arial',
                                      fill: '#fff',
                                      alian: 'center'
