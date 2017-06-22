@@ -84,19 +84,19 @@ BasicGame.Game.prototype = {
         timerText.text = 'Time: ' + seconds;
         
         gameOverText = this.add.text(this.world.centerX, this.world.centerY - 50, 'Game Over', {
-                                     font: '96px arial',
-                                     fill: '#fff',
-                                     align: 'center'
-                                     });
+            font: '96px arial',
+            fill: '#fff',
+            align: 'center'
+        });
         gameOverText.anchor.set(0.5);
         gameOverText.visible = false;
         gameOver = false;
         
-        restartButton = this.add.button((this.world.width / 2),(this.world.height / 2)+50, 'startButton', this.restartGame);
+        restartButton = this.add.button((this.world.width / 2), (this.world.height / 2) + 50, 'startButton', this.restartGame);
         restartButton.anchor.set(0.5);
         restartButton.visible = false;
         this.input.keyboard.addKeyCapture([Phaser.keyboard.LEFT, Phaser.Keyboard.RIGHT, Phaser.keyboard.SPACEBAR]);
-            cursors = this.input .keyboard.createCursorKeys();
+        cursors = this.input.keyboard.createCursorKeys();
         
         bulletAudio = this.add.audio('bullet');
         explosionAudio = this.add.audio('explosion');
@@ -110,32 +110,32 @@ BasicGame.Game.prototype = {
 	update: function () {
         this.starfield.tilePosition.y += 2;
         
-        if (lifeTotal < 1 || seconds == 60 || gameOver===true) {
+        if (lifeTotal < 1 || seconds == 60 || gameOver === true) {
             this.gameOver();
         }
-        else{
-		  this.createUfo();
-          this.createLife();
-          this.moveShip();
-          this.collisionDetection();
-        }
+            else {
+		        this.createUfo();
+                this.createLife();
+                this.moveShip();
+                this.collisionDetection();
+            }
 	},
     
-    moveShip: function() {
+    moveShip: function () {
         if(cursors.left.isDown) {
             ship.body.velocity.x = -200;
         }
         else if(cursors.right.isDown) {
-            ship.body.velocity.x = 200
+            ship.body.velocity.x = 200;
         }
         else {
-            ship.body.velocity.x = 0
+                ship.body.velocity.x = 0;
         }
         if (this.input.keyboard.isDown(Phaser.keyboard.SPACEBAR)) {
             this.fireBullet();
         }
     },
-    createUfo () {
+    createUfo: function () {
         var random = this.rnd.integerInRange(0, 20);
         if(random === 0) {
             var randomX = this.rnd.integerInRange(o, this.world.width - 150);
