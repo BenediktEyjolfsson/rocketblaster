@@ -96,7 +96,7 @@ BasicGame.Game.prototype = {
         restartButton.anchor.set(0.5);
         restartButton.visible = false;
         
-        this.input.keyboard.addKeyCapture([Phaser.Keyboard.LEFT, Phaser.Keyboard.RIGHT, Phaser.keyboard.SPACEBAR]);
+        this.input.keyboard.addKeyCapture([Phaser.Keyboard.LEFT, Phaser.Keyboard.RIGHT, Phaser.Keyboard.SPACEBAR]);
         cursors = this.input.keyboard.createCursorKeys();
         
         bulletAudio = this.add.audio('bullet');
