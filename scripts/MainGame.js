@@ -139,7 +139,7 @@ BasicGame.Game.prototype = {
     createUfo: function () {
         var random = this.rnd.integerInRange(0, 20);
         if(random === 0) {
-            var randomX = this.rnd.integerInRange(o, this.world.width - 150);
+            var randomX = this.rnd.integerInRange(0, this.world.width - 150);
             var ufo = ufos.create(randomX, -50, 'ufo');
             this.physics.enable(ufo, Phaser.Physics.ARCADE);
             ufo.body.velocity.y = this.rnd.integerInRange(200, 300);
