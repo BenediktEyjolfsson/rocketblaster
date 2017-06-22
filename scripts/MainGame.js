@@ -155,7 +155,7 @@ BasicGame.Game.prototype = {
         }
     },
     
-    fireBullet: funtion () {
+    fireBullet: function () {
     if (this.time.now > nextFire && bullets.countDead() > 0) {
         nextFire = this.time.now + fireRate;
         var bullet = bullets.getFirstExists(false);
